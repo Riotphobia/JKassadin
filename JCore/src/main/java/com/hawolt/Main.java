@@ -20,7 +20,6 @@ public class Main {
             Application.addModule(new JSessionInvalidator("JSessionInvalidator"));
             Application.addModule(new JSkinBoost("JSkinBoost"));
             Application.addModule(new JUnlock("JUnlock"));
-            Application.addModule(new JCrash("JCrash"));
             Application.addMenuEntry("Github", () -> {
                 try {
                     Desktop.getDesktop().browse(URI.create("https://github.com/Riotphobia/JKassadin"));

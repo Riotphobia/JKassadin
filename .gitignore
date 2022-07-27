@@ -8,3 +8,5 @@ jwt.log
 */test/*
 # ignore local log properties
 log.properties
+# ignore old Module JCrash
+JCrash/*

@@ -7,14 +7,13 @@
     <groupId>com.hawolt</groupId>
     <artifactId>JKassadin</artifactId>
     <packaging>pom</packaging>
-    <version>1.101</version>
+    <version>1.2</version>
     <modules>
         <module>LCU</module>
         <module>JCore</module>
         <module>JSkinBoost</module>
         <module>JSessionTracker</module>
         <module>JUnlock</module>
-        <module>JCrash</module>
     </modules>
 
     <properties>
