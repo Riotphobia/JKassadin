@@ -28,18 +28,6 @@ Use `JUnlock` > `Refund last transaction` while in Champion Select to Refund you
 
 ***Note**: After your game is done it is no longer possible to Refund your transaction for free*
 
-### JCrash
-
-1. In your taskbar, rightclick the JKassadin icon. Hover `JCrash` and select `Select Game directory`
-2. In your taskbar, rightclick the JKassadin icon. Hover `JCrash` and select `Launch Safe Client`
-3. Login,  In your taskbar, rightclick the JKassadin icon. Hover `LCU` and select the Account you want to use
-4. Queue up, once in Championselect the `Crash` option becomes available
-
-***Note**:*
-* *The Client crashes for everyone else, they are still in the Champion Select, if you Crash when everyone has locked in the Game will STILL start*
-* *You can target who receives a dodge by crashing the Client when the desired user is in pick-phase*
-* *You can only crash your own team mates*
-
 ### Download
 
 The latest pre-compiled JKassadin version can be found in the [Release Section](https://github.com/Riotphobia/JKassadin/releases)
