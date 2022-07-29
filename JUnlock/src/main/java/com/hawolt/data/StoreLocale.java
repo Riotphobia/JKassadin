@@ -14,6 +14,6 @@ public class StoreLocale {
     }};
 
     public static String retrieve(String webRegion) {
-        return mapping.getOrDefault(webRegion, webRegion);
+        return mapping.getOrDefault(webRegion.toUpperCase(), webRegion);
     }
 }
