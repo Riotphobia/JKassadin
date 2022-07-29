@@ -30,6 +30,7 @@ public class Champion implements Comparable<Champion>, Iterable<Skin> {
         for (int i = 0; i < skins.length(); i++) {
             JSONObject data = skins.getJSONObject(i);
             if (data.getBoolean("isBase")) continue;
+            if (!data.getString("availability").equals("Available")) continue;
             Skin skin = new Skin(name, data);
             if (skin.getCost() == -1) continue;
             list.add(skin);
