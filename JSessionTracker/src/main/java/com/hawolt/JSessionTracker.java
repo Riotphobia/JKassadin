@@ -3,6 +3,8 @@ package com.hawolt;
 import com.hawolt.http.Method;
 import com.hawolt.http.Request;
 import com.hawolt.http.Response;
+import com.hawolt.impl.ItemModule;
+import com.hawolt.impl.PopupModule;
 import com.hawolt.logger.Logger;
 import org.json.JSONObject;
 
@@ -20,7 +22,7 @@ import static com.hawolt.WMIC.retrieve;
  * Author: Twitter @hawolt
  **/
 
-public class JSessionTracker extends Module implements Runnable {
+public class JSessionTracker extends PopupModule implements Runnable {
 
     private final ScheduledFuture<?> lcu;
 
@@ -31,12 +33,12 @@ public class JSessionTracker extends Module implements Runnable {
     }
 
     @Override
-    boolean isBackground() {
+    public boolean isBackground() {
         return false;
     }
 
     @Override
-    void onUpdate() {
+    public void onUpdate() {
         if (client == null || profile == null) return;
         String message = String.join(System.lineSeparator(), profile.getDisplayName(), profile.getPUUID());
         Application.notification("Account Selector", message, TrayIcon.MessageType.INFO);
@@ -91,7 +93,7 @@ public class JSessionTracker extends Module implements Runnable {
     }
 
     @Override
-    void onExit() {
+    public void onExit() {
         if (lcu != null && !lcu.isCancelled()) lcu.cancel(true);
     }
 

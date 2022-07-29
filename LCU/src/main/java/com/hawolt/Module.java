@@ -7,26 +7,13 @@ import java.awt.*;
  * Author: Twitter @hawolt
  **/
 
-public abstract class Module extends PopupMenu implements IAccountSelection {
+public interface Module {
 
-    protected SummonerProfile profile;
-    protected LeagueClient client;
+    void onUpdate(LeagueClient client, SummonerProfile profile);
 
-    @Override
-    public void onUpdate(LeagueClient client, SummonerProfile profile) {
-        this.profile = profile;
-        this.client = client;
-        this.onUpdate();
-    }
+    boolean isBackground();
 
-    public Module(String name) {
-        super(name);
-        this.setEnabled(false);
-    }
+    void onUpdate();
 
-    abstract boolean isBackground();
-
-    abstract void onUpdate();
-
-    abstract void onExit();
+    void onExit();
 }

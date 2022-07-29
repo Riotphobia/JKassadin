@@ -1,5 +1,7 @@
 package com.hawolt;
 
+import com.hawolt.impl.ItemModule;
+import com.hawolt.impl.PopupModule;
 import com.hawolt.io.Core;
 import com.hawolt.logger.Logger;
 
@@ -62,7 +64,12 @@ public class Application {
 
     private final static List<Module> modules = new ArrayList<>();
 
-    public static void addModule(Module module) {
+    public static void addItemModule(ItemModule module) {
+        if (!module.isBackground()) Application.popup.add(module);
+        Application.modules.add(module);
+    }
+
+    public static void addPopupModule(PopupModule module) {
         if (!module.isBackground()) Application.popup.add(module);
         Application.modules.add(module);
     }

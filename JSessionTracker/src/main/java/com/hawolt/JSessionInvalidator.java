@@ -3,6 +3,7 @@ package com.hawolt;
 import com.hawolt.http.Method;
 import com.hawolt.http.Request;
 import com.hawolt.http.Response;
+import com.hawolt.impl.ItemModule;
 import com.hawolt.logger.Logger;
 import org.json.JSONObject;
 
@@ -15,7 +16,7 @@ import java.util.concurrent.TimeUnit;
  * Author: Twitter @hawolt
  **/
 
-public class JSessionInvalidator extends Module implements Runnable {
+public class JSessionInvalidator extends ItemModule implements Runnable {
 
     private final ScheduledFuture<?> lcu;
 
@@ -25,12 +26,12 @@ public class JSessionInvalidator extends Module implements Runnable {
     }
 
     @Override
-    boolean isBackground() {
+    public boolean isBackground() {
         return true;
     }
 
     @Override
-    void onUpdate() {
+    public void onUpdate() {
         if (client != null || profile != null) return;
         Application.notification("Account Selector", "Selected Account no longer available", TrayIcon.MessageType.INFO);
     }
@@ -51,7 +52,7 @@ public class JSessionInvalidator extends Module implements Runnable {
     }
 
     @Override
-    void onExit() {
+    public void onExit() {
         if (lcu != null && !lcu.isCancelled()) lcu.cancel(true);
     }
 

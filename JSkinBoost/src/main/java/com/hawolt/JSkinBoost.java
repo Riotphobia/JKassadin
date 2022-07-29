@@ -3,6 +3,7 @@ package com.hawolt;
 import com.hawolt.http.Method;
 import com.hawolt.http.Request;
 import com.hawolt.http.Response;
+import com.hawolt.impl.PopupModule;
 import com.hawolt.logger.Logger;
 import org.json.JSONObject;
 
@@ -22,7 +23,7 @@ import java.util.concurrent.TimeUnit;
  * Author: Twitter @hawolt
  **/
 
-public class JSkinBoost extends Module {
+public class JSkinBoost extends PopupModule {
 
     private final ScheduledFuture<?> boost;
 
@@ -100,18 +101,18 @@ public class JSkinBoost extends Module {
     }
 
     @Override
-    boolean isBackground() {
+    public boolean isBackground() {
         return false;
     }
 
     @Override
-    void onUpdate() {
+    public void onUpdate() {
         this.setEnabled(client != null);
         this.jwt = null;
     }
 
     @Override
-    void onExit() {
+    public void onExit() {
         if (boost != null && !boost.isCancelled()) boost.cancel(true);
     }
 }
