@@ -5,7 +5,7 @@
     <parent>
         <artifactId>JKassadin</artifactId>
         <groupId>com.hawolt</groupId>
-        <version>1.201</version>
+        <version>1.202</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -48,25 +48,25 @@
         <dependency>
             <groupId>com.hawolt</groupId>
             <artifactId>LCU</artifactId>
-            <version>1.201</version>
+            <version>1.202</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.hawolt</groupId>
             <artifactId>JSkinBoost</artifactId>
-            <version>1.201</version>
+            <version>1.202</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.hawolt</groupId>
             <artifactId>JSessionTracker</artifactId>
-            <version>1.201</version>
+            <version>1.202</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.hawolt</groupId>
             <artifactId>JUnlock</artifactId>
-            <version>1.201</version>
+            <version>1.202</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
