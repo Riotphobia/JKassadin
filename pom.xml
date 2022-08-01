@@ -7,7 +7,7 @@
     <groupId>com.hawolt</groupId>
     <artifactId>JKassadin</artifactId>
     <packaging>pom</packaging>
-    <version>1.203</version>
+    <version>1.204</version>
     <modules>
         <module>LCU</module>
         <module>JCore</module>
