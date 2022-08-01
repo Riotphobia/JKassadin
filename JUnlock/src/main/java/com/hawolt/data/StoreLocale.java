@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class StoreLocale {
     private final static HashMap<String, String> mapping = new HashMap<String, String>() {{
         put("EUNE", "eun");
-        put("OCE", "oc1");
+        put("OCE", "oc");
     }};
 
     public static String retrieve(String webRegion) {
